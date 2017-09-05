@@ -16,12 +16,12 @@ var howManyParameters = process.argv.length
 // for loop
 
 for (counter = 2; counter < howManyParameters; counter++) {
-  console.log("Counter ", counter, " Value ", process.argv[counter])
+  // console.log("Counter ", counter, " Value ", process.argv[counter])
   // if the parameter is a number ?
-  if (!isNaN(process.argv[counter])) {
+  if (Number.isInteger(Number(process.argv[counter]))) {
     //  keep adding to THAT variable
     sumOfTheNumbers = sumOfTheNumbers + parseInt(process.argv[counter])
-    console.log("Is a number !")
+    // console.log("Is a number !")
   }
 }
 
